@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.cmu.lti.11791.f14.hw1</groupId>
   <artifactId>hw1-yanhe</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.4-SNAPSHOT</version>
   <repositories>
     <repository>
       <id>oaqa</id>
@@ -113,5 +113,6 @@
   <scm>
   	<connection>scm:git:git@github.com:heyan4869/hw1-yanhe</connection>
   	<developerConnection>scm:git:git@github.com:heyan4869/hw1-yanhe</developerConnection>
+    <tag>HEAD</tag>
   </scm>
 </project>

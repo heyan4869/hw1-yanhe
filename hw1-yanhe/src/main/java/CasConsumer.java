@@ -14,7 +14,7 @@ import org.xml.sax.SAXException;
 
 /**
  * CasConsumer build a new file and save the gene name and ID that have been
- * extracted by geneFinder
+ * extracted by geneFinder.
  * @author yan
  *
  */
@@ -24,6 +24,9 @@ public class CasConsumer extends CasConsumer_ImplBase {
   File out = null;
   BufferedWriter bw = null;
 
+  /**
+   * initialize prepare to write the gene information into a file.
+   */
   @Override
   public void initialize() {
 
@@ -39,6 +42,10 @@ public class CasConsumer extends CasConsumer_ImplBase {
 
   }
   
+  /**
+   * processCas has the function that get the gene ID and name from the sentence
+   * and try to write it into a local file whose name is hw1-yanhe.out
+   */
   @Override
   public void processCas(CAS aCAS) throws ResourceProcessException {
     // TODO Auto-generated method stub
@@ -81,6 +88,13 @@ public class CasConsumer extends CasConsumer_ImplBase {
        
   }
   
+  /**
+   * writeInFile store the gene ID and name into the local file.
+   * @param geneIdentifier is the ID of the gene
+   * @param geneName is the name of the gene
+   * @param start is the first index of the gene's name in the sentence 
+   * @param end is the last index of the gene's name in the sentence 
+   */
   public void writeInFile(String geneIdentifier, String geneName, int start, int end)
           throws Exception {
         bw.write(geneIdentifier + "|" + start + " " + end + "|" + geneName);
@@ -89,6 +103,9 @@ public class CasConsumer extends CasConsumer_ImplBase {
         //System.out.println("shit");
       }
   
+  /**
+   * destroy ends the process of write the gene information into the file.
+   */
   @Override
   public void destroy() {
 

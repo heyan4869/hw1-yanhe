@@ -60,6 +60,9 @@ public class CollectionReader extends CollectionReader_ImplBase {
       return false;}
   }
 
+  /**
+   * getProgress returns null
+   */
   public Progress[] getProgress() {
     // TODO Auto-generated method stub
     return null;

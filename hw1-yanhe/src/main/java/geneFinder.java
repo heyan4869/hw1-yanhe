@@ -20,6 +20,10 @@ import com.aliasi.util.AbstractExternalizable;
  */
 public class geneFinder extends JCasAnnotator_ImplBase {
 
+  /**
+   * process use the LingPipe to identify the gene's information in the content
+   * of the file
+   */
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub
@@ -75,7 +79,13 @@ public class geneFinder extends JCasAnnotator_ImplBase {
           
   }
     
-     
+  /**
+   * countBlank counts the space in each sentence and use it to calculate
+   * the accurate start and end index of gene's name in the sentence.
+   * @param phrase is the sentence whose type is string that processed by
+   * geneFinder.
+   * @return
+   */
   private int countBlank(String phrase){
     int countBlank = 0;
     for(int i=0; i<phrase.length(); i++) {
