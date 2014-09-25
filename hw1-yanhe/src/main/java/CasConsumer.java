@@ -13,7 +13,8 @@ import org.apache.uima.resource.ResourceProcessException;
 import org.xml.sax.SAXException;
 
 /**
- * CasConsumer 
+ * CasConsumer build a new file and save the gene name and ID that have been
+ * extracted by geneFinder
  * @author yan
  *
  */
